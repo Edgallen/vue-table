@@ -11,7 +11,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/api", router);
-// middleware для проверки валидности JSON body
 app.use((err, req, res, next) => {
   if (err instanceof SyntaxError && err.status === 400 && "body" in err) {
     return res.sendStatus(400);
@@ -28,4 +27,4 @@ async function startApp() {
   }
 }
 
-startApp();
+export default app;
