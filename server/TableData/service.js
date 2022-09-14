@@ -1,5 +1,4 @@
 import TableData from "./model.js";
-import Table from "../Table/model.js";
 
 class TableDataService {
   async create(tableDataBody) {
